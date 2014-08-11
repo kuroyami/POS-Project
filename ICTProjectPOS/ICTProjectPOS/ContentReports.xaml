@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="ICTProjectPOS.ContentReports"
+             xmlns:local ="clr-namespace:ICTProjectPOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Width="1920"
+             Height="972">
+    <Canvas>
+        <local:Report_ControlPanel
+            x:Name="ControlPanel"
+            Canvas.Left="50" Canvas.Top="50"
+            Width="530"
+            Height="872"/>
+        
+        <local:Report_ContentPanel
+            x:Name="ContentPanel"
+            Canvas.Right="50" Canvas.Top="50"
+            Width="1230"
+            Height="872"/>
+    </Canvas>
+</UserControl>

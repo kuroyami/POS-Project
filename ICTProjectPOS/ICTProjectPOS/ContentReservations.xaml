@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ICTProjectPOS.ContentReservations"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:local ="clr-namespace:ICTProjectPOS"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             Width="1920"
+             Height="972">
+
+    <Canvas>
+
+
+        <local:Reservation_CalendarPanel
+            x:Name="CalendarPanel"
+            Canvas.Left="50" Canvas.Top="50"
+            Width="420"
+            Height="411" />
+
+        <local:Reservation_WaitingListPanel
+            Canvas.Left="50" Canvas.Top="511"
+            Width="420"
+            Height="411"/>
+
+        <local:Reservation_AgendaPanel
+            Canvas.Right="50" Canvas.Top="50"
+            Width="1350"
+            Height="872" Canvas.Left="520"/>
+    </Canvas>
+
+</UserControl>

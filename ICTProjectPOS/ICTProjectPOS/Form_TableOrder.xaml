@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="ICTProjectPOS.Form_TableOrder"
+             xmlns:local ="clr-namespace:ICTProjectPOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             x:Name="FormTableOrder"
+             d:DesignHeight="300" d:DesignWidth="300"
+             Background="White"
+             Width="540"
+             Height="780">
+
+
+    <Canvas>
+        <Rectangle
+            x:Name="Rectangle1"
+            Canvas.Left="30" Canvas.Top="100"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+        <Rectangle
+            x:Name="Rectangle2"
+            Canvas.Left="30" Canvas.Top="650"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+        <Rectangle
+            x:Name="Rectangle3"
+            Canvas.Left="30" Canvas.Top="740"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+        
+        
+        <TextBlock
+            x:Name="TextBlock_TableNum" FontWeight="Bold"
+            FontSize="48" Height="60"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="20"
+            >TABLE XX</TextBlock>
+        <Button
+            x:Name="Button_CloseTableForm"
+            Canvas.Right="30" Canvas.Top="35"
+            Style="{StaticResource CloseButtonStyle}"
+            Click="Button_Close_Click"
+            >CLOSE</Button>
+        
+        <TextBlock
+            x:Name="TextBlock_ItemOrderedHeader"
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="125"
+            >ITEM ORDERED</TextBlock>
+        <Button
+            x:Name="Button_DeleteItem"
+            Canvas.Left="30" Canvas.Top="150"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="False"
+            Click="Button_DeleteItem_Click"
+            >DELETE</Button>
+        <Button
+            x:Name="Button_ItemForm"
+            Canvas.Right="30" Canvas.Top="150"
+            Style="{StaticResource GreenButtonStyle}"
+            Click="Button_ItemForm_Click"
+            >ADD</Button>
+
+        <local:Table_TableOrder
+            Canvas.Left="30" Canvas.Top="195"
+            x:Name="TableTableOrder"
+            Height="330" Width="480"/>
+       
+        <TextBlock
+            x:Name="TextBlock_SumHeader"
+            FontSize="14"
+            FontWeight="Bold"
+            Text="SUM :"
+            Canvas.Right="150" Canvas.Top="535" 
+            Foreground="#363636"
+            HorizontalAlignment="Right"/>
+        <TextBlock
+            x:Name="TextBlock_SumNum"
+            FontSize="14"
+            FontWeight="Bold"
+            Text="0.00"
+            Foreground="#363636"
+            Canvas.Right="45" Canvas.Top="535" 
+            HorizontalAlignment="Right"/>
+        <TextBlock
+            x:Name="TextBlock_TaxHeader"
+            FontSize="14"
+            FontWeight="Bold"
+            Text="TAX &amp; SERVICE :"
+            Canvas.Right="150" Canvas.Top="560" 
+            Foreground="#363636"
+            HorizontalAlignment="Right"/>
+        <TextBlock
+            x:Name="TextBlock_TaxNum"
+            FontSize="14"
+            Foreground="#363636"
+            FontWeight="Bold"
+            Text="0.00"
+            Canvas.Right="45" Canvas.Top="560" 
+            HorizontalAlignment="Right"/>
+        <Rectangle 
+            Canvas.Right="30" Canvas.Top="596"
+            Fill="#eeeeee"
+            Height="40" Width="185"
+            />
+        <TextBlock
+            x:Name="TextBlock_TotalHeader"
+            FontSize="14"
+            FontWeight="Bold"
+            Text="TOTAL :"
+            Foreground="#363636"
+            Canvas.Right="150" Canvas.Top="605" 
+            HorizontalAlignment="Right"/>
+        <TextBlock
+            x:Name="TextBlock_TotalNum"
+            FontSize="14"
+            FontWeight="Bold"
+            Foreground="#363636"
+            Text="0.00"
+            Canvas.Right="45" Canvas.Top="605" 
+            HorizontalAlignment="Right"/>
+
+        <TextBlock
+            x:Name="TextBlock_PrintHeader"
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="670"
+            >PRINT RECEIPT</TextBlock>
+        <Button
+            x:Name="Button_PrintDraft"
+            Canvas.Left="30" Canvas.Top="700"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="True"
+            Click="Button_PrintDraft_Click"
+            >DRAFT</Button>
+        <Button
+            x:Name="Button_EditReceipt"
+            Canvas.Left="135" Canvas.Top="700"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="False"
+            Click="Button_EditReceipt_Click"
+            >EDIT</Button>
+        <Button
+            x:Name="Button_PaymentForm"
+            Canvas.Right="30" Canvas.Top="700"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="False"
+            Click="Button_PaymentForm_Click"
+            >PAY</Button>
+
+    </Canvas>
+</UserControl>

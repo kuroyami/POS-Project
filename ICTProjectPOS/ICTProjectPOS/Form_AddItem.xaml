@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="ICTProjectPOS.Form_AddItem"
+             xmlns:local ="clr-namespace:ICTProjectPOS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             x:Name="FormAddItem"
+             Width="540"
+             Height="880"
+             BorderBrush="#518f64" BorderThickness="13"
+             Background="White">
+    <Canvas 
+        Margin="-13,-13,-13,-13">
+        <Rectangle
+            x:Name="Rectangle1"
+            Canvas.Left="30" Canvas.Top="100"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+        <Rectangle
+            x:Name="Rectangle2"
+            Canvas.Left="30" Canvas.Top="350"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+        <Rectangle
+            x:Name="Rectangle3"
+            Canvas.Left="30" Canvas.Bottom="30"
+            Width="480" Height="12" 
+            Fill="#FF363636"/>
+
+        <TextBlock
+            x:Name="TextBlock_AddItemHeader"
+            FontWeight="Bold"
+            FontSize="48" Height="60"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="20"
+            >ADD ITEM</TextBlock>
+        <Button
+            x:Name="Button_Close"
+            Canvas.Right="30" Canvas.Top="35"
+            Style="{StaticResource CloseButtonStyle}"
+            Click="Button_Close_Click"
+            >CLOSE</Button>
+
+        <TextBlock
+            x:Name="TextBlock_FoodHeader"
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="125"
+            >FOOD</TextBlock>
+        
+        <Button
+            x:Name="Button_FoodCategory1"
+            Canvas.Left="30" Canvas.Top="150"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >STARTER</Button>
+        <Button
+            x:Name="Button_FoodCategory2"
+            Canvas.Left="130" Canvas.Top="150"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >SOUP</Button>
+        <Button
+            x:Name="Button_FoodCategory3"
+            Canvas.Left="230" Canvas.Top="150"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >MAIN</Button>
+        <Button
+            x:Name="Button_FoodCategory4"
+            Canvas.Left="330" Canvas.Top="150"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >DESSERT</Button>
+        <Button
+            x:Name="Button_FoodCategory5"
+            Canvas.Left="430" Canvas.Top="150"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >ICE CREAM</Button>
+        <Button
+            x:Name="Button_FoodCategory6"
+            Canvas.Left="30" Canvas.Top="190"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >F OTHERS</Button>
+
+
+        <TextBlock
+            x:Name="TextBlock_BeverageHeader"
+            FontWeight="Bold"
+            Foreground="#363636"
+            FontSize="14"
+            Canvas.Left="30" Canvas.Top="235"
+            >BEVERAGE</TextBlock>
+
+        <Button
+            x:Name="Button_BeverageCategory1"
+            Canvas.Left="30" Canvas.Top="260"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >JUICE</Button>
+        <Button
+            x:Name="Button_BeverageCategory2"
+            Canvas.Left="130" Canvas.Top="260"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >COCKTAIL</Button>
+        <Button
+            x:Name="Button_BeverageCategory3"
+            Canvas.Left="230" Canvas.Top="260"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >WINE</Button>
+        <Button
+            x:Name="Button_BeverageCategory4"
+            Canvas.Left="30" Canvas.Top="300"
+            Style="{StaticResource ItemCategoryButtonStyle}"
+            Click="ButtonCategory_Click"
+            >B OTHERS</Button>
+
+        <TextBlock
+            x:Name="TextBlock_ItemListHeader"
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="375"
+            Text="SELECT A CATEGORY"
+            />
+        
+        <local:Table_AddItem 
+            x:Name="TableAddItem"
+            Canvas.Left="30" Canvas.Top="405"
+            Height="330" Width="480"
+            />
+
+        <TextBlock
+            x:Name="TextBlock_ItemName" 
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="755"
+            Text="SELECT AN ITEM"
+            />
+        
+        <Button
+            x:Name="Button_DecreaseQty"
+            Canvas.Left="30" Canvas.Bottom="55"
+            Style="{StaticResource QuantityButtonStyle}"
+            IsEnabled="False"
+            Click="Button_Quantity_Click"
+            >-</Button>
+        <Button
+            x:Name="Button_IncreaseQty"
+            Canvas.Left="200" Canvas.Bottom="55"
+            Style="{StaticResource QuantityButtonStyle}"
+            Click="Button_Quantity_Click"
+            IsEnabled="False"
+            >+</Button>
+
+        <Rectangle 
+            Canvas.Left="90" Canvas.Bottom="55"
+            Fill="#eeeeee"
+            Height="40" Width="100"
+            />
+        <Border 
+            BorderBrush="Transparent"
+            Height="40" Width="100"
+            Canvas.Left="90" Canvas.Bottom="55">
+            <TextBlock
+                x:Name="TextBlock_ItemQuantity"
+                FontWeight="Bold"
+                FontSize="18"
+                Foreground="#363636"
+                Text="0" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+            />
+        </Border>
+
+        <Button
+            x:Name="Button_AddItem"
+            Canvas.Right="30" Canvas.Bottom="55"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="False"
+            Click="Button_AddItem_Click"
+            >ADD</Button>
+
+
+    </Canvas>
+</UserControl>

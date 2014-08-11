@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="ICTProjectPOS.NumPad_Cash"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Width="480" Height="380">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle 
+            Grid.ColumnSpan="2" Fill="#363636" Margin="0, 0, 90, 0"
+            />
+        <TextBlock
+            Foreground="White"
+            FontSize="24" FontWeight="Bold"
+            Text="$" VerticalAlignment="Center" Margin="10"/>
+        <TextBlock
+            x:Name="TextBlock_Total"
+            Foreground="White"
+            Grid.ColumnSpan="2"
+            FontSize="24" FontWeight="Bold"
+            Text="0.00" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10, 10, 100, 10"/>
+        
+        <Button
+            Grid.Column="0" Grid.Row="1"
+            Click="Button_NumPad_Click"
+            Content="1" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="1" Grid.Row="1"
+            Click="Button_NumPad_Click"
+            Content="2" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="2" Grid.Row="1"
+            Click="Button_NumPad_Click"
+            Content="3" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="0" Grid.Row="2"
+            Click="Button_NumPad_Click"
+            Content="4" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="1" Grid.Row="2"
+            Click="Button_NumPad_Click"
+            Content="5" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="2" Grid.Row="2"
+            Click="Button_NumPad_Click"
+            Content="6" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="0" Grid.Row="3"
+            Click="Button_NumPad_Click"
+            Content="7" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="1" Grid.Row="3"
+            Click="Button_NumPad_Click"
+            Content="8" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="2" Grid.Row="3"
+            Click="Button_NumPad_Click"
+            Content="9" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="0" Grid.Row="4"
+            Foreground="White"
+            Click="Button_NumPad_Click"
+            Content="CE" Style="{StaticResource BlackNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="1" Grid.Row="4"
+            Click="Button_NumPad_Click"
+            Content="0" Style="{StaticResource WhiteNumPadButtonStyle}"/>
+        <Button
+            Grid.Column="2" Grid.Row="4"
+            Click="Button_NumPad_Click"
+            Content="C" Style="{StaticResource LightGrayNumPadButtonStyle}"/>
+        
+    </Grid>
+</UserControl>

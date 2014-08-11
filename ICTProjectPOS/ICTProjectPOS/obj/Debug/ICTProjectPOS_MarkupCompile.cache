@@ -1,0 +1,20 @@
+﻿ICTProjectPOS
+
+
+winexe
+C#
+.cs
+C:\Users\Carlo\Documents\Visual Studio 2013\Projects\ICTProjectPOS\ICTProjectPOS\obj\Debug\
+ICTProjectPOS
+none
+false
+DEBUG;TRACE
+C:\Users\Carlo\Documents\Visual Studio 2013\Projects\ICTProjectPOS\ICTProjectPOS\App.xaml
+201080580207
+1-1481757914
+26861340090
+12-1401562060
+ContentReports.xaml;ContentReservations.xaml;ContentSummary.xaml;Content_Tables.xaml;Form_AddItem.xaml;Form_Payment.xaml;Form_TableOrder.xaml;MainWindow.xaml;NumPad_Cash.xaml;Report_ContentPanel.xaml;Report_ControlPanel.xaml;Reservation_AgendaPanel.xaml;Reservation_CalendarPanel.xaml;Reservation_WaitingListPanel.xaml;Reservation_WaitingListPanel_Table.xaml;ResourceDictionary.xaml;Table_AddItem.xaml;Table_ReportContent.xaml;Table_TableOrder.xaml;TitleBar.xaml;
+
+False
+

@@ -1,0 +1,244 @@
+﻿<UserControl x:Class="ICTProjectPOS.Reservation_CalendarPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Width="420"
+             Height="411"
+             Background="White">
+    
+    <UserControl.Resources>
+        <Style TargetType="TextBlock"
+               x:Key="DayHeader">
+            <Setter Property="Foreground" Value="#518f64"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_PreviousMonth">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#bdbdbd"/>
+            <Setter Property="Background" Value="#FFFFFF"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_PreviousMonth_Elapsed">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#bdbdbd"/>
+            <Setter Property="Background" Value="#e7e7e7"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_NextMonth">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#bdbdbd"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_NextMonth_Elapsed">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#bdbdbd"/>
+            <Setter Property="Background" Value="#e7e7e7"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_CurrentMonth">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#363636"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_CurrentMonth_Elapsed">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="#363636"/>
+            <Setter Property="Background" Value="#e7e7e7"/>
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Date_Today">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 5 0 0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#518f64"/>
+        </Style>
+
+        <Style x:Key="Week_Transparent"
+               TargetType="Rectangle">
+            <Setter Property="Fill" Value="Transparent"/>
+        </Style>
+        
+        <Style x:Key="Week_Selected"
+               TargetType="Rectangle">
+            <Setter Property="Fill" Value="Transparent"/>
+            <Setter Property="Stroke" Value="#518f64"/>
+            <Setter Property="StrokeThickness" Value="3"/>
+        </Style>
+        
+        
+
+    </UserControl.Resources>
+
+    <Canvas>
+        <TextBlock
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="30" Canvas.Top="20"
+            >CALENDAR</TextBlock>
+
+        <Rectangle
+            Canvas.Left="30" Canvas.Top="45"
+            Width="360" Height="12" 
+            Fill="#FF363636"/>
+
+        <Button
+            x:Name="Button_PreviousMonth"
+            Canvas.Left="30" Canvas.Top="70"
+            Style="{StaticResource QuantityButtonStyle}"
+            Width="30" 
+            Height="30"
+            FontSize="26"
+            Click="Button_PreviousMonth_Click"
+            >&lt;</Button>
+        <Button
+            x:Name="Button_NextMonth"
+            Canvas.Right="30" Canvas.Top="70"
+            Style="{StaticResource QuantityButtonStyle}"
+            Width="30" 
+            Height="30"
+            FontSize="26"
+            Click="Button_NextMonth_Click"
+            >&gt;</Button>
+
+        <Rectangle 
+            Canvas.Left="70" Canvas.Top="70"
+            Fill="#e7e7e7"
+            Height="30" Width="280"
+            />
+        <Border 
+            BorderBrush="Transparent"
+            Height="30" Width="280"
+            Canvas.Left="70" Canvas.Top="70">
+            <TextBlock
+                x:Name="TextBlock_MonthYear"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="#363636"
+                Text="JULY 2014" 
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+            />
+        </Border>
+
+        <Grid
+            Canvas.Left="30" Canvas.Top="110"
+            Width="360" Height="30"
+            >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="MON" Grid.Column="0" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="TUE" Grid.Column="1" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="WED" Grid.Column="2" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="THU" Grid.Column="3" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="FRI" Grid.Column="4" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="SAT" Grid.Column="5" Style="{StaticResource DayHeader}"/>
+            <TextBlock Text="SUN" Grid.Column="6" Style="{StaticResource DayHeader}"/>
+        </Grid>
+
+        <Grid
+            Canvas.Left="28" Canvas.Top="150"
+            Width="364" Height="234">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="TextBlock_Date_00" Text="0" Grid.Column="0" Grid.Row="0" Style="{StaticResource Date_PreviousMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_10" Text="0" Grid.Column="1" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_20" Text="0" Grid.Column="2" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_30" Text="0" Grid.Column="3" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_40" Text="0" Grid.Column="4" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_50" Text="0" Grid.Column="5" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_60" Text="0" Grid.Column="6" Grid.Row="0" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_01" Text="0" Grid.Column="0" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_11" Text="0" Grid.Column="1" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_21" Text="0" Grid.Column="2" Grid.Row="1" Style="{StaticResource Date_Today}"/>
+            <TextBlock x:Name="TextBlock_Date_31" Text="0" Grid.Column="3" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_41" Text="0" Grid.Column="4" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_51" Text="0" Grid.Column="5" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_61" Text="0" Grid.Column="6" Grid.Row="1" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_02" Text="0" Grid.Column="0" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_12" Text="0" Grid.Column="1" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_22" Text="0" Grid.Column="2" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_32" Text="0" Grid.Column="3" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_42" Text="0" Grid.Column="4" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_52" Text="0" Grid.Column="5" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_62" Text="0" Grid.Column="6" Grid.Row="2" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_03" Text="0" Grid.Column="0" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_13" Text="0" Grid.Column="1" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_23" Text="0" Grid.Column="2" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_33" Text="0" Grid.Column="3" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_43" Text="0" Grid.Column="4" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_53" Text="0" Grid.Column="5" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_63" Text="0" Grid.Column="6" Grid.Row="3" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_04" Text="0" Grid.Column="0" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_14" Text="0" Grid.Column="1" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_24" Text="0" Grid.Column="2" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_34" Text="0" Grid.Column="3" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_44" Text="0" Grid.Column="4" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_54" Text="0" Grid.Column="5" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_64" Text="0" Grid.Column="6" Grid.Row="4" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_05" Text="0" Grid.Column="0" Grid.Row="5" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_15" Text="0" Grid.Column="1" Grid.Row="5" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_25" Text="0" Grid.Column="2" Grid.Row="5" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_35" Text="0" Grid.Column="3" Grid.Row="5" Style="{StaticResource Date_CurrentMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_45" Text="0" Grid.Column="4" Grid.Row="5" Style="{StaticResource Date_NextMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_55" Text="0" Grid.Column="5" Grid.Row="5" Style="{StaticResource Date_NextMonth}"/>
+            <TextBlock x:Name="TextBlock_Date_65" Text="0" Grid.Column="6" Grid.Row="5" Style="{StaticResource Date_NextMonth}"/>
+
+            <Rectangle x:Name="Rectangle_Indicator_Row0" Grid.Row="0" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+            <Rectangle x:Name="Rectangle_Indicator_Row1" Grid.Row="1" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+            <Rectangle x:Name="Rectangle_Indicator_Row2" Grid.Row="2" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+            <Rectangle x:Name="Rectangle_Indicator_Row3" Grid.Row="3" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+            <Rectangle x:Name="Rectangle_Indicator_Row4" Grid.Row="4" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+            <Rectangle x:Name="Rectangle_Indicator_Row5" Grid.Row="5" Grid.ColumnSpan="7" Style="{StaticResource Week_Transparent}" MouseLeftButtonDown="Week_MouseLeftButtonDown"/>
+
+        </Grid>
+
+    </Canvas>
+</UserControl>
