@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,8 @@ namespace ICTProjectPOS
     {
         DateTime selectedDate;
 
+        public delegate void UpdateAgendaPanel(DateTime startDate);
+        public UpdateAgendaPanel updateAgendaPanel;
 
         public Reservation_CalendarPanel()
         {
@@ -131,7 +134,6 @@ namespace ICTProjectPOS
 
                     i++;
 
-
                 }
             }
 
@@ -238,6 +240,77 @@ namespace ICTProjectPOS
         {
             Rectangle indicator = sender as Rectangle;
             SetSelectedWeekIndicator(indicator);
+
+            updateAgendaPanel(GetStartDate());
+        }
+
+        private DateTime GetStartDate()
+        {
+            Rectangle[] rects = {Rectangle_Indicator_Row0, Rectangle_Indicator_Row1, Rectangle_Indicator_Row2, Rectangle_Indicator_Row3,
+                                Rectangle_Indicator_Row4, Rectangle_Indicator_Row5};
+
+            CultureInfo provider = CultureInfo.InvariantCulture;
+
+
+            //GET MONTH & YEAR
+            string monthYear = TextBlock_MonthYear.Text;
+
+            int year = Int32.Parse(monthYear.Split(' ')[1]);
+
+            int month = 0;
+
+            string format = "MMMM";
+
+            try
+            {
+                month = DateTime.ParseExact(monthYear.Split(' ')[0], format, provider).Month;
+            }
+            catch
+            {
+
+            }
+
+            
+
+            //GET DATE
+            int row = 0;
+
+            foreach (Rectangle rect in rects)
+            {
+                if (rect.Style == (Style)FindResource("Week_Selected"))
+                {
+                    row = Grid.GetRow(rect);
+                }
+            }
+
+            string textBlock_name = String.Format("TextBlock_Date_0{0}", row.ToString()); 
+
+            object item = _Grid.FindName(textBlock_name);
+
+            TextBlock tb = (TextBlock)item;
+
+            int day = Int32.Parse(tb.Text);
+
+
+            //IN CASE DATE IS FOR PREVIOUS / NEXT MONTH'S
+            if (row == 0)
+            {
+                if (day > 7)
+                {
+                    month--;
+                }
+            }
+            else if (row > 3)
+            {
+                if (day < 9)
+                {
+                    month++;
+                }
+            }
+
+            DateTime dt = new DateTime(year, month, day);
+
+            return dt;
         }
 
         private void InitializeIndicator()

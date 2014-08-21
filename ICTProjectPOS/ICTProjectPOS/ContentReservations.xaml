@@ -21,6 +21,7 @@
             Height="411"/>
 
         <local:Reservation_AgendaPanel
+            x:Name="AgendaPanel"
             Canvas.Right="50" Canvas.Top="50"
             Width="1350"
             Height="872" Canvas.Left="520"/>

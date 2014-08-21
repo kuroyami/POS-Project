@@ -168,6 +168,7 @@
         </Grid>
 
         <Grid
+            x:Name="_Grid"
             Canvas.Left="28" Canvas.Top="150"
             Width="364" Height="234">
             <Grid.ColumnDefinitions>

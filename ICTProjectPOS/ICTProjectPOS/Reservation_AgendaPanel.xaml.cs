@@ -24,5 +24,57 @@ namespace ICTProjectPOS
         {
             InitializeComponent();
         }
+
+        internal void UpdatePanel(DateTime startDate)
+        {
+
+            int day = startDate.Day;
+
+            TextBlock[] textBlocks = {TextBlock_Header_01, TextBlock_Header_02, TextBlock_Header_03, 
+                                     TextBlock_Header_04, TextBlock_Header_05, TextBlock_Header_06, TextBlock_Header_07};
+
+            foreach (TextBlock tb in textBlocks)
+            {
+                string str = tb.Text;
+
+                str = str.Split(' ')[2];
+                str = day + "  " + str;
+
+                tb.Text = str;
+
+                day++;
+            }
+        }
+
+        internal void InitializeAgenda()
+        {
+            DayOfWeek[] dayOfWeek = {DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday,
+                                    DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday};
+
+            //GetToday
+            DateTime dt = DateTime.Today;
+
+            //GetStartDate
+            int i = 0;
+
+            foreach (DayOfWeek nameDay in dayOfWeek)
+            {
+                if (dt.DayOfWeek == nameDay)
+                {
+                    break;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+
+            int day = dt.Day - i;
+
+            DateTime dt2 = new DateTime(dt.Year, dt.Month, day);
+
+            //UpdatePanel
+            UpdatePanel(dt2);
+        }
     }
 }

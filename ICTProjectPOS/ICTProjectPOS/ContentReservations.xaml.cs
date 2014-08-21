@@ -31,6 +31,14 @@ namespace ICTProjectPOS
         internal void InitializeContent()
         {
             CalendarPanel.InitializeCalendar();
+            AgendaPanel.InitializeAgenda();
+            CalendarPanel.updateAgendaPanel += UpdateAgendaPanel;
+
+        }
+
+        private void UpdateAgendaPanel(DateTime startDate)
+        {
+            AgendaPanel.UpdatePanel(startDate);
         }
 
     }
