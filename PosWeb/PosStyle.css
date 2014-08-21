@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+p{
+	font-size:20px;
+}
+
+form{
+	font-size:20px;
+	text-align:left;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:link {
+    color: #000;
+}
+a:visited {
+    color: #000;
+}
+
+a:hover {
+    color: #F7C42B;
+}
+
+Table{
+	width:65%;
+	height:100px;
+	position:fixed;
+	background-color:#FFF;
+	z-index:1000;
+	margin-left:20%;
+	font-size:20px;
+	padding-right:40px;
+	font-weight:bold;
+}
+
+H1{
+	color:#F7A02D;
+	margin:0px;
+	padding:0px;
+	font-size:40px;
+}
+
+#H1FontStyled{
+	color:#43712D;
+	font-size:40px;
+}
+
+Body{
+	font-family: 'Josefin Slab', serif;
+	margin:0px;
+	padding:0px;
+}
+
+#LeftWhiteSpace{
+	width:20%;
+	height:100px;
+	position:fixed;
+	z-index:1000;
+	background-color:#fff;
+}
+#RightWhiteSpace{
+	width:20%;
+	height:100px;
+	position:fixed;
+	z-index:1000;
+	background-color:#fff;
+	margin-left:80%;
+}
+
+#ImageContainer{
+	width:100%;
+	height:600px;
+	background-image:url(Images/dreamstimeCiabatta_2000px.jpg);
+
+}
+
+
+
+#SignUp{
+	width:60%;
+	height:180px;
+	background-image:url(Images/TextBg2.jpg);
+	padding-top:30px;
+	padding-left:20%;
+	padding-right:20%;
+	color:#FFF;
+}
+
+#TextHome{
+	width:60%;
+	height:180px;
+	background-image:url(Images/TextBg1.jpg);
+	padding-top:30px;
+	padding-left:20%;
+	padding-right:20%;
+	color:#FFF;
+}
+
+#TextHome2{
+	width:60%;
+	height:180px;
+	background-image:url(Images/TextBg2.jpg);
+	padding-top:30px;
+	padding-left:20%;
+	padding-right:20%;
+	color:#FFF;
+}
+
+
+#TextContact{
+	
+	width:60%;
+	height:270px;
+	background-image:url(Images/TextBg1.jpg);
+	padding-top:30px;
+	padding-left:20%;
+	padding-right:20%;
+	color:#FFF;
+}
+
+#RestaurantImg{
+	float:left;
+}
