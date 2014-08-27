@@ -29,18 +29,6 @@ namespace ICTProjectPOS
         public Reservation_CalendarPanel()
         {
             InitializeComponent();
-
-            //TODO
-            //
-
-            // DONE Route Prev/NextMonth Button to change 'heading' only
-            // DONE Route Prev/NextMonth Button to change date as well
-
-            // DONE elapsed days have light gray background
-            // Show Today have green background
-
-            // DONE Enable click on grid, clicking grid adds an overlay of green bar
-            //Output selected week's date to AgendaPanel
         }
 
         internal void InitializeCalendar()
@@ -315,11 +303,22 @@ namespace ICTProjectPOS
 
         private void InitializeIndicator()
         {
-            String today = DateTime.Today.ToString("d");
+            TextBlock[,] dates = GetDateGrid();
 
-            int day = Int32.Parse(today.Split('/')[0]);
+            int rowIndex = 0;
 
-            int rowIndex = day / 7;
+            for (int y = 0; y < 6; y++)
+            {
+                for (int x = 0; x < 7; x++)
+                {
+                    if (dates[y, x].Style == (Style)FindResource("Date_Today"))
+                    {
+                        rowIndex = Grid.GetRow(dates[y, x]);
+                        break;
+                    }
+                    
+                }
+            }
 
             SetSelectedWeekIndicator(GetRectangleIndicators()[rowIndex]);
         }

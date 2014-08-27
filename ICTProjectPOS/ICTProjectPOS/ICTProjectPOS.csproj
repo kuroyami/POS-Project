@@ -96,6 +96,7 @@
     <Compile Include="Reservation_WaitingListPanel_Table.xaml.cs">
       <DependentUpon>Reservation_WaitingListPanel_Table.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reservation_Weekly.cs" />
     <Compile Include="TableOrder.cs" />
     <Compile Include="TableRow.cs" />
     <Compile Include="Table_AddItem.xaml.cs">

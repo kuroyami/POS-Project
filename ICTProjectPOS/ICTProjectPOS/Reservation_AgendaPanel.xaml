@@ -148,93 +148,93 @@
             <TextBlock x:Name="TextBlock_Time_108" Text="8 PM" Grid.Column="8" Grid.Row="10" Style="{StaticResource Time_LightGray_RightMargin}"/>
             <TextBlock x:Name="TextBlock_Time_118" Text="9 PM" Grid.Column="8" Grid.Row="11" Style="{StaticResource Time_LightGray_RightMargin}"/>
 
-            <Button x:Name="Button_Agenda_11" Grid.Column="1" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_12" Grid.Column="2" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_13" Grid.Column="3" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_14" Grid.Column="4" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_15" Grid.Column="5" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_16" Content="27/50" Grid.Column="6" Grid.Row="1" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_17" Content="1/50" Grid.Column="7" Grid.Row="1" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_00" Grid.Column="1" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_01" Grid.Column="2" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_02" Grid.Column="3" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_03" Grid.Column="4" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_04" Grid.Column="5" Grid.Row="1" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_05" Grid.Column="6" Grid.Row="1" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_06" Grid.Column="7" Grid.Row="1" Style="{StaticResource Agenda_Green}"/>
 
-            <Button x:Name="Button_Agenda_21" Content="20/50" Grid.Column="1" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_22" Content="13/50" Grid.Column="2" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_23" Content="10/50" Grid.Column="3" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_24"  Grid.Column="4" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_25" Content="1/50" Grid.Column="5" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_26" Content="1/50" Grid.Column="6" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_27" Content="1/50" Grid.Column="7" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_10" Grid.Column="1" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_11" Grid.Column="2" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_12" Grid.Column="3" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_13" Grid.Column="4" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_14" Grid.Column="5" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_15" Grid.Column="6" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_16" Grid.Column="7" Grid.Row="2" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_31" Content="1/50" Grid.Column="1" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_32" Content="1/50" Grid.Column="2" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_33" Content="1/50" Grid.Column="3" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_34" Content="1/50" Grid.Column="4" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_35" Content="1/50" Grid.Column="5" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_36" Content="1/50" Grid.Column="6" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_37" Content="1/50" Grid.Column="7" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_20" Grid.Column="1" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_21" Grid.Column="2" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_22" Grid.Column="3" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_23" Grid.Column="4" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_24" Grid.Column="5" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_25" Grid.Column="6" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_26" Grid.Column="7" Grid.Row="3" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_41"  Grid.Column="1" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_42" Content="1/50" Grid.Column="2" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_43"  Grid.Column="3" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_44"  Grid.Column="4" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_45" Content="5/50" Grid.Column="5" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_46" Content="1/50" Grid.Column="6" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_47" Content="1/50" Grid.Column="7" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_30" Grid.Column="1" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_31" Grid.Column="2" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_32" Grid.Column="3" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_33" Grid.Column="4" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_34" Grid.Column="5" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_35" Grid.Column="6" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_36" Grid.Column="7" Grid.Row="4" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_51"  Grid.Column="1" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_52"  Grid.Column="2" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_53"  Grid.Column="3" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_54"  Grid.Column="4" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_55"  Grid.Column="5" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_56" Content="24/50" Grid.Column="6" Grid.Row="5" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_57" Content="38/50" Grid.Column="7" Grid.Row="5" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_40" Grid.Column="1" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_41" Grid.Column="2" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_42" Grid.Column="3" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_43" Grid.Column="4" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_44" Grid.Column="5" Grid.Row="5" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_45" Grid.Column="6" Grid.Row="5" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_46" Grid.Column="7" Grid.Row="5" Style="{StaticResource Agenda_Green}"/>
 
-            <Button x:Name="Button_Agenda_61" Grid.Column="1" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_62" Grid.Column="2" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_63" Grid.Column="3" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_64" Grid.Column="4" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_65" Grid.Column="5" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_66" Grid.Column="6" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_67" Content="18/50" Grid.Column="7" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_50" Grid.Column="1" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_51" Grid.Column="2" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_52" Grid.Column="3" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_53" Grid.Column="4" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_54" Grid.Column="5" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_55" Grid.Column="6" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_56" Grid.Column="7" Grid.Row="6" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_71" Grid.Column="1" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_72" Grid.Column="2" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_73" Grid.Column="3" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_74" Grid.Column="4" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_75" Grid.Column="5" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_76" Content="16/50" Grid.Column="6" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_77" Content="10/50" Grid.Column="7" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_60" Grid.Column="1" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_61" Grid.Column="2" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_62" Grid.Column="3" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_63" Grid.Column="4" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_64" Grid.Column="5" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_65" Grid.Column="6" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_66" Grid.Column="7" Grid.Row="7" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_81" Content="1/50" Grid.Column="1" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_82" Content="6/50" Grid.Column="2" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_83" Grid.Column="3" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_84" Grid.Column="4" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_85" Content="45/50" Grid.Column="5" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_86" Content="40/50" Grid.Column="6" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_87" Content="50/50" Grid.Column="7" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_70" Grid.Column="1" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_71" Grid.Column="2" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_72" Grid.Column="3" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_73" Grid.Column="4" Grid.Row="8" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_74" Grid.Column="5" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_75" Grid.Column="6" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_76" Grid.Column="7" Grid.Row="8" Style="{StaticResource Agenda_Blue}"/>
 
-            <Button x:Name="Button_Agenda_91" Content="26/50" Grid.Column="1" Grid.Row="9" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_92" Content="25/50" Grid.Column="2" Grid.Row="9" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_93" Content="20/50" Grid.Column="3" Grid.Row="9" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_94" Content="24/50" Grid.Column="4" Grid.Row="9" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_95" Content="50/50" Grid.Column="5" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_96" Content="50/50" Grid.Column="6" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_97" Content="50/50" Grid.Column="7" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_80" Grid.Column="1" Grid.Row="9" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_81" Grid.Column="2" Grid.Row="9" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_82" Grid.Column="3" Grid.Row="9" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_83" Grid.Column="4" Grid.Row="9" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_84" Grid.Column="5" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_85" Grid.Column="6" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_86" Grid.Column="7" Grid.Row="9" Style="{StaticResource Agenda_Blue}"/>
 
-            <Button x:Name="Button_Agenda_101" Content="9/50" Grid.Column="1" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_102" Grid.Column="2" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_103" Content="10/50" Grid.Column="3" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_104" Grid.Column="4" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_105" Content="44/50" Grid.Column="5" Grid.Row="10" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_106" Content="40/50" Grid.Column="6" Grid.Row="10" Style="{StaticResource Agenda_Blue}"/>
-            <Button x:Name="Button_Agenda_107" Content="15/50" Grid.Column="7" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_90" Grid.Column="1" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_91" Grid.Column="2" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_92" Grid.Column="3" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_93" Grid.Column="4" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_94" Grid.Column="5" Grid.Row="10" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_95" Grid.Column="6" Grid.Row="10" Style="{StaticResource Agenda_Blue}"/>
+            <Button x:Name="Button_Agenda_96" Grid.Column="7" Grid.Row="10" Style="{StaticResource Agenda_Gray}"/>
 
-            <Button x:Name="Button_Agenda_111" Grid.Column="1" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_112" Grid.Column="2" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_113" Grid.Column="3" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_114" Grid.Column="4" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
-            <Button x:Name="Button_Agenda_115" Content="28/50" Grid.Column="5" Grid.Row="11" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_116" Content="30/50" Grid.Column="6" Grid.Row="11" Style="{StaticResource Agenda_Green}"/>
-            <Button x:Name="Button_Agenda_117"  Grid.Column="7" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_100" Grid.Column="1" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_101" Grid.Column="2" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_102" Grid.Column="3" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_103" Grid.Column="4" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
+            <Button x:Name="Button_Agenda_104" Grid.Column="5" Grid.Row="11" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_105" Grid.Column="6" Grid.Row="11" Style="{StaticResource Agenda_Green}"/>
+            <Button x:Name="Button_Agenda_106" Grid.Column="7" Grid.Row="11" Style="{StaticResource Agenda_Gray}"/>
 
         </Grid>
             
