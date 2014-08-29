@@ -108,3 +108,9 @@ C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debu
 C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\ICTProjectPOS.g.resources
 C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\ICTProjectPOS.Properties.Resources.resources
 C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\ICTProjectPOS.csproj.GenerateResource.Cache
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Blueprint.baml
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Blueprint.g.cs
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Blueprint_CreateNewPopup.baml
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Blueprint_CreateNewPopup.g.cs
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Form.baml
+C:\Users\Carlo\Documents\GitHub\POS-Project\ICTProjectPOS\ICTProjectPOS\obj\Debug\Reservation_Form.g.cs

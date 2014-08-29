@@ -24,6 +24,11 @@ namespace ICTProjectPOS
     {
         List<Reservation_Weekly> reservation_weekly;
 
+        public delegate void InfalteBlueprintPanel(string date, string time);
+        public InfalteBlueprintPanel inflateBlueprintPanel;
+
+        DateTime startDate;
+
         public Reservation_AgendaPanel()
         {
             InitializeComponent();
@@ -47,9 +52,12 @@ namespace ICTProjectPOS
 
         }
 
+
         internal void UpdatePanel(DateTime startDate)
         {
             reservation_weekly = new List<Reservation_Weekly>();
+
+            this.startDate = startDate;
 
             UpdateDateHeading(startDate);
             UpdateReservationContent(startDate);
@@ -173,8 +181,6 @@ namespace ICTProjectPOS
 
             }
 
-            System.Diagnostics.Debug.WriteLine("res" + reservation_weekly.Count);
-
         }
 
         private void UpdateButtonStyle(Button button)
@@ -228,6 +234,29 @@ namespace ICTProjectPOS
 
             //UpdatePanel
             UpdatePanel(dt2);
+        }
+
+        private void Button_Agenda_Click(object sender, RoutedEventArgs e)
+        {
+            //Get Date
+            Button btn = (Button)sender;
+            int column = Grid.GetColumn(btn);
+
+            int day = this.startDate.Day + (column - 1);
+
+            string date = day.ToString() + "/" + this.startDate.Month + "/" + this.startDate.Year;
+
+            //Get Time
+            int row = Grid.GetRow(btn);
+            int hour = row + 10;
+
+            string time = hour + ":00";
+
+            inflateBlueprintPanel(date, time);
+
+            //Inflate Layout
+            //Layout.Update(Date, Time)
+
         }
     }
 }

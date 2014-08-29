@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="ICTProjectPOS.Reservation_Blueprint_CreateNewPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Height="972" Width="1920"
+             Background="#CC363636"
+             >
+
+    <Grid Height="220" Width="520" Background="#518f64" >
+        <Rectangle Fill="White" Height="200" Width="500"/>
+        
+        <TextBlock
+            Text="THIS TABLE IS CURRENTLY NOT RESERVED"
+            FontWeight="Bold"
+            FontSize="20" HorizontalAlignment="Center"
+            Margin="0,40,0,0"
+            Foreground="#363636"
+            />
+
+        <TextBlock             
+            FontSize="14"
+            Foreground="#363636"
+            Margin="0 -10 0 0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            create a new reservation for 
+            <Run x:Name="TextBlock_Table" FontWeight="Bold" FontSize="15">TABLE 7</Run>, on 
+            <Run x:Name="TextBlock_Date" FontWeight="Bold" FontSize="15">28/02/2014</Run>
+            at 
+            <Run x:Name="TextBlock_Time" FontWeight="Bold" FontSize="15">17:00</Run>
+            ?
+        </TextBlock>
+
+
+        <Button
+            x:Name="Button_CreateReservation"
+            Margin="160 130 0 0"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="True"
+            Click="Button_CreateReservation_Click"
+            >CREATE</Button>
+
+        <Button
+            x:Name="Button_Cancel"
+            Margin="370 130 0 0"
+            Style="{StaticResource GreenButtonStyle}"
+            IsEnabled="True"
+            Click="Button_Cancel_Click"
+            >CANCEL</Button>
+
+    </Grid>
+</UserControl>

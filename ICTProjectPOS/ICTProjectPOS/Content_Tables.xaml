@@ -14,8 +14,6 @@
     <Canvas
         x:Name="Parent_Grid">
 
-        <TextBlock TextAlignment="Center" VerticalAlignment="Center" Foreground="White"
-                   >Tables: This page is under construction</TextBlock>
         <Button
             Canvas.Left="374" Canvas.Top="300"
             x:Name="Table_01" 

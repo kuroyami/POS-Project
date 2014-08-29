@@ -21,6 +21,9 @@ namespace ICTProjectPOS
     public partial class ContentReservations : UserControl
     {
 
+        Reservation_Blueprint reservation_blueprint;
+        Reservation_Form reservation_form;
+
         public ContentReservations()
         {
             InitializeComponent();
@@ -33,12 +36,68 @@ namespace ICTProjectPOS
             CalendarPanel.InitializeCalendar();
             AgendaPanel.InitializeAgenda();
             CalendarPanel.updateAgendaPanel += UpdateAgendaPanel;
+            AgendaPanel.inflateBlueprintPanel += InflateBlueprintPanel;
+
+            reservation_blueprint = new Reservation_Blueprint();
+            reservation_blueprint.Margin = new Thickness(295, 50, 0, 0);
+            reservation_blueprint.Visibility = Visibility.Hidden;
+            reservation_blueprint.inflateReservationForm += inflateReservationForm;
+            reservation_blueprint.moveBlueprintLayout += moveBlueprintLayout;
+
+            reservation_form = new Reservation_Form();
+            reservation_form.Margin = new Thickness(50, 70, 0, 0);
+            reservation_form.cancelButtonClick += CloseReservationForm;
+            reservation_form.Visibility = Visibility.Hidden;
+            _Canvas.Children.Add(reservation_form);
+
+            reservation_blueprint.closeButtonClicked += CloseUserControl;
+            _Canvas.Children.Add(reservation_blueprint);
+
 
         }
+
+        private void inflateReservationForm(int reservationNum)
+        {
+            reservation_form.Visibility = Visibility.Visible;
+            reservation_form.InitializeForm(reservationNum);
+            reservation_blueprint.popup.Margin = new Thickness(-520, -115, 0, 0);
+        }
+
+
+        private void moveBlueprintLayout()
+        {
+            reservation_blueprint.Margin = new Thickness(520, 50, 0, 0);
+        }
+
 
         private void UpdateAgendaPanel(DateTime startDate)
         {
             AgendaPanel.UpdatePanel(startDate);
+        }
+
+        private void InflateBlueprintPanel(string date, string time)
+        {
+            reservation_blueprint.Visibility = Visibility.Visible;
+
+
+            _GreyBackdrop.Visibility = Visibility.Visible;
+
+            reservation_blueprint.InitializePanel(date, time);
+
+        }
+
+        private void CloseReservationForm()
+        {
+            reservation_form.Visibility = Visibility.Hidden;
+            reservation_blueprint.Margin = new Thickness(295, 50, 0, 0);
+            reservation_blueprint.popup.Margin = new Thickness(-295, -115, 0, 0);
+        }
+
+        private void CloseUserControl(UserControl userControl)
+        {
+            userControl.Visibility = Visibility.Hidden;
+            
+            _GreyBackdrop.Visibility = Visibility.Hidden;
         }
 
     }

@@ -27,7 +27,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="#4c8399"/>
+                        <Ellipse Fill="#518f64"/>
                         <ContentPresenter Content="{TemplateBinding Content}" 
                                           Margin="-2, -3, 0, 0"    
                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -45,7 +45,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Fill="#518f64"/>
+                        <Ellipse Fill="#4c8399"/>
                         <ContentPresenter Content="{TemplateBinding Content}" 
                                           Margin="-2, -3, 0, 0"    
                                           HorizontalAlignment="Center" VerticalAlignment="Center"/>

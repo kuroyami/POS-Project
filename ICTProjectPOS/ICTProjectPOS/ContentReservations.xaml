@@ -6,8 +6,8 @@
              Width="1920"
              Height="972">
 
-    <Canvas>
-
+    <Canvas
+        x:Name="_Canvas">
 
         <local:Reservation_CalendarPanel
             x:Name="CalendarPanel"
@@ -25,6 +25,13 @@
             Canvas.Right="50" Canvas.Top="50"
             Width="1350"
             Height="872" Canvas.Left="520"/>
+
+        <Rectangle
+            x:Name="_GreyBackdrop"
+            Width="1920" Height="972"
+            Fill="#CC363636"
+            Visibility="Hidden"/>
+
     </Canvas>
 
 </UserControl>

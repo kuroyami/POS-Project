@@ -87,9 +87,19 @@
     <Compile Include="Reservation_AgendaPanel.xaml.cs">
       <DependentUpon>Reservation_AgendaPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reservation_Blueprint.xaml.cs">
+      <DependentUpon>Reservation_Blueprint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Blueprint_CreateNewPopup.xaml.cs">
+      <DependentUpon>Reservation_Blueprint_CreateNewPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reservation_CalendarPanel.xaml.cs">
       <DependentUpon>Reservation_CalendarPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Reservation_Form.xaml.cs">
+      <DependentUpon>Reservation_Form.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation_Hourly.cs" />
     <Compile Include="Reservation_WaitingListPanel.xaml.cs">
       <DependentUpon>Reservation_WaitingListPanel.xaml</DependentUpon>
     </Compile>
@@ -167,7 +177,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Reservation_Blueprint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reservation_Blueprint_CreateNewPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reservation_CalendarPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reservation_Form.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -237,6 +259,7 @@
     <Content Include="RestaurantDB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="sample_blueprint_overlay_mini.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
