@@ -55,13 +55,17 @@ namespace ICTProjectPOS
 
         internal void UpdatePanel(DateTime startDate)
         {
-            reservation_weekly = new List<Reservation_Weekly>();
-
             this.startDate = startDate;
 
-            UpdateDateHeading(startDate);
-            UpdateReservationContent(startDate);
-            
+            UpdatePanel();
+        }
+
+        public void UpdatePanel()
+        {
+            reservation_weekly = new List<Reservation_Weekly>();
+
+            UpdateDateHeading(this.startDate);
+            UpdateReservationContent(this.startDate);
         }
 
         private void UpdateDateHeading(DateTime startDate)
@@ -165,15 +169,15 @@ namespace ICTProjectPOS
 
                 if (agendaButtons[y, x].Content == null)
                 {
-                    agendaButtons[y, x].Content = "1 / 50";
+                    agendaButtons[y, x].Content = "1 / 31";
                 }
                 else
                 {
-                    string s = agendaButtons[y, x].Content.ToString().Replace(" / 50", "");
+                    string s = agendaButtons[y, x].Content.ToString().Replace(" / 31", "");
                     int i = Int32.Parse(s);
                     i++;
 
-                    agendaButtons[y, x].Content = i.ToString() + " / 50";
+                    agendaButtons[y, x].Content = i.ToString() + " / 31";
 
                     UpdateButtonStyle(agendaButtons[y, x]);
 
@@ -185,15 +189,15 @@ namespace ICTProjectPOS
 
         private void UpdateButtonStyle(Button button)
         {
-            string content = button.Content.ToString().Replace(" / 50", "");
+            string content = button.Content.ToString().Replace(" / 31", "");
 
             int i = Int32.Parse(content);
 
-            if (i > 39)
+            if (i > 25)
             {
                 button.Style = (Style)FindResource("Agenda_Blue");
             }
-            else if (i > 24)
+            else if (i > 15)
             {
                 button.Style = (Style)FindResource("Agenda_Green");
             }

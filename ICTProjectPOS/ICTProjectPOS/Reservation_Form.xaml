@@ -20,6 +20,15 @@
             <Setter Property="Foreground" Value="#363636"/>
             <Setter Property="Canvas.Right" Value="25"/>
         </Style>
+        <Style x:Key="Edit" TargetType="TextBox">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="2"/>
+            <Setter Property="Canvas.Right" Value="15"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Foreground" Value="#363636"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#518f64"/>
+        </Style>
         <Style x:Key="ReadOnly" TargetType="Rectangle">
             <Setter Property="Fill" Value="#0d000000"/>
             <Setter Property="Canvas.Left" Value="15"/>
@@ -127,6 +136,16 @@
         <TextBlock x:Name="TextBlock_Email" Text="edward.chandra@gmail.com" Canvas.Top="305" Style="{StaticResource Content}"/>
         <TextBlock x:Name="TextBlock_Phone" Text="7834 4783" Canvas.Top="370" Style="{StaticResource Content}"/>
         <TextBlock x:Name="TextBlock_Comment" Text="Table at the garden by the pool." Canvas.Top="435" Canvas.Left="25" Width="345" Height="140" TextAlignment="Left" Style="{StaticResource Content}"/>
+
+        
+        <TextBox x:Name="TextBox_TableNum" Visibility="Hidden" Text="7" Canvas.Top="170" Canvas.Right="270" Style="{StaticResource Edit}" Height="28" Width="110" />
+        <TextBox x:Name="TextBox_Date" Visibility="Hidden" Text="23/5/2014" Canvas.Top="170" Canvas.Right="140" Width="110" Style="{StaticResource Edit}"/>
+        <TextBox x:Name="TextBox_Time" Visibility="Hidden" Text="17:00" Canvas.Top="170" Style="{StaticResource Edit}" Width="110"/>
+        <TextBox x:Name="TextBox_FirstName" Visibility="Hidden" Text="EDWARD" Canvas.Top="235" Canvas.Right="205" Style="{StaticResource Edit}" Width="175"/>
+        <TextBox x:Name="TextBox_LastName" Visibility="Hidden" Text="CHANDRA" Canvas.Top="235" Style="{StaticResource Edit}" Width="175"/>
+        <TextBox x:Name="TextBox_Email" Visibility="Hidden" Text="edward.chandra@gmail.com" Canvas.Top="300" Style="{StaticResource Edit}" Width="365"/>
+        <TextBox x:Name="TextBox_Phone" Visibility="Hidden" Text="7834 4783" Canvas.Top="365" Style="{StaticResource Edit}" Width="365"/>
+        <TextBox x:Name="TextBox_Comment" Visibility="Hidden" Text="Table at the garden by the pool." Canvas.Top="430" Canvas.Left="15" Width="365" Height="150" TextAlignment="Left" Style="{StaticResource Edit}" Padding="5"/>
 
     </Canvas>
 </UserControl>

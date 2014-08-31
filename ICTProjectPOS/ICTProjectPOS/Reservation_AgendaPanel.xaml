@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              Width="1350"
              Height="872"
-             Background="White">
+             Background="White"
+             x:Name="_Reservation_Agenda">
     
     <UserControl.Resources>
         <Style x:Key="Header_Black" TargetType="TextBlock">

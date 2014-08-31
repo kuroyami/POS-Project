@@ -180,11 +180,7 @@ namespace ICTProjectPOS
 
             String path = Assembly.GetExecutingAssembly().Location;
 
-            System.Diagnostics.Debug.WriteLine("PATH: " + path);
-
             path = path.Replace("bin\\Debug\\ICTProjectPOS.exe", "RestaurantDB.accdb");
-
-            System.Diagnostics.Debug.WriteLine("PATH: " + path);
 
             String connectionString = String.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0}", path);
 

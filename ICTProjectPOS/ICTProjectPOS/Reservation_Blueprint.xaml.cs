@@ -28,9 +28,6 @@ namespace ICTProjectPOS
         public delegate void InflateReservationForm(int reservationNum);
         public InflateReservationForm inflateReservationForm;
 
-        public delegate void MoveBlueprintLayout();
-        public MoveBlueprintLayout moveBlueprintLayout;
-
         public Reservation_Blueprint_CreateNewPopup popup;
 
 
@@ -42,6 +39,11 @@ namespace ICTProjectPOS
         public Reservation_Blueprint()
         {
             InitializeComponent();
+            popup = new Reservation_Blueprint_CreateNewPopup();
+            _Canvas.Children.Add(popup);
+            popup.Visibility = Visibility.Hidden;
+            popup.cancelButtonClick += ClosePopupMessage;
+            popup.Margin = new Thickness(-295, -115, 0, 0);
         }
 
         internal void InitializePanel(string date, string time)
@@ -49,18 +51,14 @@ namespace ICTProjectPOS
             this._date = date;
             this._time = time;
 
-            popup = new Reservation_Blueprint_CreateNewPopup();
-            popup.cancelButtonClick += ClosePopupMessage;
-            popup.Margin = new Thickness(-295, -115, 0, 0);
-            _Canvas.Children.Add(popup);
-            popup.Visibility = Visibility.Hidden;
+            UpdateBlueprint();
+        }
 
-
-
+        public void UpdateBlueprint()
+        {
             UpdateHourlyReservation();
             UpdateTableButtons();
             UpdateTitleBar();
-
         }
 
 
@@ -178,7 +176,6 @@ namespace ICTProjectPOS
             {
                 int resNum = GetReservationNumber(table.Content.ToString());
                 inflateReservationForm(resNum);
-                moveBlueprintLayout();
             }
             else
             {

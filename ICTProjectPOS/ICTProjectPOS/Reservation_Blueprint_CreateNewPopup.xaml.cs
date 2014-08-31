@@ -23,6 +23,9 @@ namespace ICTProjectPOS
         public delegate void CancelButtonClick();
         public CancelButtonClick cancelButtonClick;
 
+        public delegate void CreateNewReservation(string tableNum, string date, string time);
+        public CreateNewReservation createNewReservation;
+
         public Reservation_Blueprint_CreateNewPopup()
         {
             InitializeComponent();
@@ -30,7 +33,8 @@ namespace ICTProjectPOS
 
         private void Button_CreateReservation_Click(object sender, RoutedEventArgs e)
         {
-
+            createNewReservation(TextBlock_Table.Text.Replace("TABLE ",""), TextBlock_Date.Text, TextBlock_Time.Text);
+            cancelButtonClick();
         }
 
         private void Button_Cancel_Click(object sender, RoutedEventArgs e)
