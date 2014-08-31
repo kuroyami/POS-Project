@@ -121,6 +121,7 @@
     <Compile Include="TitleBar.xaml.cs">
       <DependentUpon>TitleBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WaitingList.cs" />
     <Page Include="ContentReports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

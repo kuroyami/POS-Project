@@ -30,7 +30,14 @@ namespace ICTProjectPOS
         public delegate void UpdateAccdbRelatedUI();
         public UpdateAccdbRelatedUI updateAccdbRelatedUI;
 
+        public delegate void DeleteWaitingList();
+        public DeleteWaitingList delegate_deleteWaitingList;
+        public delegate void UpdateWaitingList();
+        public UpdateWaitingList delegate_updateWaitingList;
+
         int resNum;
+
+        public bool _DeleteWaitingList = false;
 
         public Reservation_Form()
         {
@@ -41,17 +48,18 @@ namespace ICTProjectPOS
         {
 
             cancelButtonClick();
+
+            _DeleteWaitingList = false;
         }
 
         internal void InitializeForm(int resNum)
         {
+
             this.resNum = resNum;
 
             Form_ReadState();
 
             UpdateForm();
-            
-
         }
 
         private void Form_EditState()
@@ -93,6 +101,21 @@ namespace ICTProjectPOS
             CreateNewReservation();
 
             TextBox_TableNum.Text = tableNum;
+            TextBox_Date.Text = date;
+            TextBox_Time.Text = time;
+        }
+
+        public void CreateNewReservation(string firstName, string lastName, string email, string phoneNum, string comment, string date, string time)
+        {
+            CreateNewReservation();
+
+            TextBox_TableNum.Text = "";
+
+            TextBox_FirstName.Text = firstName;
+            TextBox_LastName.Text = lastName;
+            TextBox_Email.Text = email;
+            TextBox_Phone.Text = phoneNum;
+            TextBox_Comment.Text = comment;
             TextBox_Date.Text = date;
             TextBox_Time.Text = time;
         }
@@ -179,6 +202,14 @@ namespace ICTProjectPOS
             Form_ReadState();
             UpdateForm();
             updateAccdbRelatedUI();
+
+            if (this._DeleteWaitingList == true)
+            {
+                delegate_deleteWaitingList();
+                delegate_updateWaitingList();
+            }
+
+            this._DeleteWaitingList = false;
         }
 
         private void SaveToAccdb()
@@ -270,5 +301,6 @@ namespace ICTProjectPOS
 
             return textBlocks;
         }
+
     }
 }

@@ -21,8 +21,35 @@
             Fill="#FF363636"/>
 
         <local:Reservation_WaitingListPanel_Table
+            x:Name="_Table"
             Canvas.Left="30" Canvas.Top="70"
-            Width="360" Height="310"/>
+            Width="360" Height="270"/>
+
+        <Button
+            x:Name="Button_PreviousPage" Canvas.Left="30" Canvas.Bottom="25" Width="35" Height="28" Content="&lt;" Style="{StaticResource GreenButtonStyle}" IsEnabled="False"
+            Click="Button_PageNavigation_Click"/>
+        <Button
+            x:Name="Button_NextPage" Canvas.Left="185" Canvas.Bottom="25" Width="35" Height="28" Content="&gt;" Style="{StaticResource GreenButtonStyle}" IsEnabled="False"
+            Click="Button_PageNavigation_Click"/>
+
+        <Rectangle Canvas.Left="75" Canvas.Bottom="25" Width="100" Height="28" Fill="#FFefefef"/>
+        <TextBlock
+            x:Name="TextBlock_PageIndicator"
+            FontWeight="Bold"
+            FontSize="14"
+            Foreground="#363636"
+            Canvas.Left="100" Canvas.Bottom="30"
+            >1 OF 1</TextBlock>
+
+        <Button
+                x:Name="Button_CreateNewReservation"
+                Content="CREATE"
+                Width="80"
+                Style="{StaticResource GreenButtonStyle}"
+                Grid.Column="0"
+                Height="28"
+                Margin="310 360 0 0"
+                Click="Button_CreateNewReservation_Click"/>
         
     </Canvas>
 </UserControl>

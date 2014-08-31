@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             Width="360" Height="310">
+             Width="360" Height="270">
     
     <UserControl.Resources>
         <Style x:Key="Table_Header" TargetType="TextBlock">
@@ -25,6 +25,7 @@
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="TextAlignment" Value="Center"/>
             <Setter Property="Padding" Value="6"/>
+            
         </Style>
         <Style x:Key="Table_Style_2" TargetType="TextBlock">
             <Setter Property="Background" Value="#eeeeee"/>
@@ -33,9 +34,18 @@
             <Setter Property="Padding" Value="6"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
+
+        <Style x:Key="Table_Style_Highlight" TargetType="TextBlock">
+            <Setter Property="Background" Value="#518f64"/>
+            <Setter Property="Foreground" Value="#FFFFFF"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="6"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
     </UserControl.Resources>
     
-    <Grid>
+    <Grid x:Name="_Grid">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -46,70 +56,49 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="3.5*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="NO" x:Name="TextBlock_00" Grid.Row="0" Grid.Column="0" Style="{StaticResource Table_Header}"/>
+        <TextBlock Text="NO" x:Name="TextBlock_00" Grid.Row="0" Grid.Column="0" Style="{StaticResource Table_Header}" />
         <TextBlock Text="GUEST NAME" x:Name="TextBlock_01" Grid.Row="0" Grid.Column="1" Style="{StaticResource Table_Header_LeftJustified}"/>
-        <TextBlock Text="PAX" x:Name="TextBlock_02" Grid.Row="0" Grid.Column="2" Style="{StaticResource Table_Header}"/>
-        <TextBlock Text="DATE" x:Name="TextBlock_03" Grid.Row="0" Grid.Column="3" Style="{StaticResource Table_Header}"/>
+        <TextBlock Text="DATE" x:Name="TextBlock_03" Grid.Row="0" Grid.Column="2" Style="{StaticResource Table_Header}"/>
 
-        <TextBlock Text="1"  x:Name="TextBlock_10" Grid.Row="1" Grid.Column="0" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="CARLO PUTRA" x:Name="TextBlock_11" Grid.Row="1" Grid.Column="1" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="4" x:Name="TextBlock_12" Grid.Row="1" Grid.Column="2" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="28/7/2014" x:Name="TextBlock_13" Grid.Row="1" Grid.Column="3" Style="{StaticResource Table_Style_1}"/>
+        <TextBlock Text="1"  x:Name="TextBlock_10" Grid.Row="1" Grid.Column="0" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="CARLO PUTRA" x:Name="TextBlock_11" Grid.Row="1" Grid.Column="1" Style="{StaticResource Table_Style_1}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="28/7/2014" x:Name="TextBlock_12" Grid.Row="1" Grid.Column="2" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock Text="2" x:Name="TextBlock_20" Grid.Row="2" Grid.Column="0" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock Text="WILSON LIM" x:Name="TextBlock_21" Grid.Row="2" Grid.Column="1" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock Text="2" x:Name="TextBlock_22" Grid.Row="2" Grid.Column="2" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock Text="28/7/2014" x:Name="TextBlock_23" Grid.Row="2" Grid.Column="3" Style="{StaticResource Table_Style_2}"/>
+        <TextBlock Text="2" x:Name="TextBlock_20" Grid.Row="2" Grid.Column="0" Style="{StaticResource Table_Style_Highlight}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="WILSON LIM" x:Name="TextBlock_21" Grid.Row="2" Grid.Column="1" Style="{StaticResource Table_Style_Highlight}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="28/7/2014" x:Name="TextBlock_22" Grid.Row="2" Grid.Column="2" Style="{StaticResource Table_Style_Highlight}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock Text="3" x:Name="TextBlock_30" Grid.Row="3" Grid.Column="0" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="VINCENT HARTANTO" x:Name="TextBlock_31" Grid.Row="3" Grid.Column="1" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="6" x:Name="TextBlock_32" Grid.Row="3" Grid.Column="2" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock Text="29/7/2014" x:Name="TextBlock_33" Grid.Row="3" Grid.Column="3" Style="{StaticResource Table_Style_1}"/>
+        <TextBlock Text="3" x:Name="TextBlock_30" Grid.Row="3" Grid.Column="0" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="VINCENT HARTANTO" x:Name="TextBlock_31" Grid.Row="3" Grid.Column="1" Style="{StaticResource Table_Style_1}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock Text="29/7/2014" x:Name="TextBlock_32" Grid.Row="3" Grid.Column="2" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock x:Name="TextBlock_40" Grid.Row="4" Grid.Column="0" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_41" Grid.Row="4" Grid.Column="1" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_42" Grid.Row="4" Grid.Column="2" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_43" Grid.Row="4" Grid.Column="3" Style="{StaticResource Table_Style_2}"/>
+        <TextBlock x:Name="TextBlock_40" Grid.Row="4" Grid.Column="0" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_41" Grid.Row="4" Grid.Column="1" Style="{StaticResource Table_Style_2}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_42" Grid.Row="4" Grid.Column="2" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock x:Name="TextBlock_50" Grid.Row="5" Grid.Column="0" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_51" Grid.Row="5" Grid.Column="1" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_52" Grid.Row="5" Grid.Column="2" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_53" Grid.Row="5" Grid.Column="3" Style="{StaticResource Table_Style_1}"/>
+        <TextBlock x:Name="TextBlock_50" Grid.Row="5" Grid.Column="0" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_51" Grid.Row="5" Grid.Column="1" Style="{StaticResource Table_Style_1}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_52" Grid.Row="5" Grid.Column="2" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock x:Name="TextBlock_60" Grid.Row="6" Grid.Column="0" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_61" Grid.Row="6" Grid.Column="1" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_62" Grid.Row="6" Grid.Column="2" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_63" Grid.Row="6" Grid.Column="3" Style="{StaticResource Table_Style_2}"/>
+        <TextBlock x:Name="TextBlock_60" Grid.Row="6" Grid.Column="0" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_61" Grid.Row="6" Grid.Column="1" Style="{StaticResource Table_Style_2}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_62" Grid.Row="6" Grid.Column="2" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock x:Name="TextBlock_70" Grid.Row="7" Grid.Column="0" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_71" Grid.Row="7" Grid.Column="1" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_72" Grid.Row="7" Grid.Column="2" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_73" Grid.Row="7" Grid.Column="3" Style="{StaticResource Table_Style_1}"/>
+        <TextBlock x:Name="TextBlock_70" Grid.Row="7" Grid.Column="0" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_71" Grid.Row="7" Grid.Column="1" Style="{StaticResource Table_Style_1}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_72" Grid.Row="7" Grid.Column="2" Style="{StaticResource Table_Style_1}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
-        <TextBlock x:Name="TextBlock_80" Grid.Row="8" Grid.Column="0" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_81" Grid.Row="8" Grid.Column="1" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_82" Grid.Row="8" Grid.Column="2" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_83" Grid.Row="8" Grid.Column="3" Style="{StaticResource Table_Style_2}"/>
-
-        <TextBlock x:Name="TextBlock_90" Grid.Row="9" Grid.Column="0" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_91" Grid.Row="9" Grid.Column="1" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_92" Grid.Row="9" Grid.Column="2" Style="{StaticResource Table_Style_1}"/>
-        <TextBlock x:Name="TextBlock_93" Grid.Row="9" Grid.Column="3" Style="{StaticResource Table_Style_1}"/>
-
-        <TextBlock x:Name="TextBlock_100" Grid.Row="10" Grid.Column="0" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_101" Grid.Row="10" Grid.Column="1" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_102" Grid.Row="10" Grid.Column="2" Style="{StaticResource Table_Style_2}"/>
-        <TextBlock x:Name="TextBlock_103" Grid.Row="10" Grid.Column="3" Style="{StaticResource Table_Style_2}"/>
+        <TextBlock x:Name="TextBlock_80" Grid.Row="8" Grid.Column="0" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_81" Grid.Row="8" Grid.Column="1" Style="{StaticResource Table_Style_2}" TextAlignment="Left" Padding="10 7 0 0" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
+        <TextBlock x:Name="TextBlock_82" Grid.Row="8" Grid.Column="2" Style="{StaticResource Table_Style_2}" MouseLeftButtonDown="Table_MouseLeftButtonDown"/>
 
         <Rectangle Grid.RowSpan="11" Grid.Column="0" HorizontalAlignment="Right" Width="2" Height="310" Fill="White"/>
         <Rectangle Grid.RowSpan="11" Grid.Column="1" HorizontalAlignment="Right" Width="2" Height="310" Fill="White"/>

@@ -16,6 +16,7 @@
             Height="411" />
 
         <local:Reservation_WaitingListPanel
+            x:Name="WaitingListPanel"
             Canvas.Left="50" Canvas.Top="511"
             Width="420"
             Height="411"/>
