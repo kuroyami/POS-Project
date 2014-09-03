@@ -52,6 +52,7 @@ Body{
 	font-family: 'Josefin Slab', serif;
 	margin:0px;
 	padding:0px;
+	background-image:url(Images/TextBg1.jpg);
 }
 
 #LeftWhiteSpace{
@@ -70,16 +71,65 @@ Body{
 	margin-left:80%;
 }
 
+#TopSpace{
+	height:100px;
+	float:left;
+	width:100%;
+}
+
 #ImageContainer{
+	float:left;
 	width:100%;
 	height:600px;
 	background-image:url(Images/dreamstimeCiabatta_2000px.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
 
+#ImageContainerContact{
+	float:left;
+	width:100%;
+	height:600px;
+	background-image:url(Images/RestaurantImg2.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#ImageContainerLogin{
+	float:left;
+	width:100%;
+	height:600px;
+	background-image:url(Images/Image.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#ImageContainerMenu{
+	float:left;
+	width:100%;
+	height:600px;
+	background-image:url(Images/Image2.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+#ImageContainerReserve{
+	float:left;
+	width:100%;
+	height:600px;
+	background-image:url(Images/RestaurantImg3.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
 }
 
 
-
 #SignUp{
+	float:left;
 	width:60%;
 	height:180px;
 	background-image:url(Images/TextBg2.jpg);
@@ -88,19 +138,11 @@ Body{
 	padding-right:20%;
 	color:#FFF;
 }
-.container {
-    width: 500px;
-    clear: both;
-}
-.container input {
-    width: 100%;
-    clear: both;
-}
-
 
 #TextHome{
+	float:left;
 	width:60%;
-	height:180px;
+	min-height:160px;
 	background-image:url(Images/TextBg1.jpg);
 	padding-top:30px;
 	padding-left:20%;
@@ -109,6 +151,7 @@ Body{
 }
 
 #TextHome2{
+	float:left;
 	width:60%;
 	height:180px;
 	background-image:url(Images/TextBg2.jpg);
@@ -120,7 +163,8 @@ Body{
 
 
 #TextContact{
-	
+
+	float:left;	
 	width:60%;
 	height:270px;
 	background-image:url(Images/TextBg1.jpg);
@@ -133,4 +177,3 @@ Body{
 #RestaurantImg{
 	float:left;
 }
-
