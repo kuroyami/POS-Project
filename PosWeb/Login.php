@@ -38,20 +38,31 @@ include_once 'includes/db_connect.php';
 sec_session_start();
 ?>
 <div id="TextHome">
+<?php
+        if (isset($_GET['error'])) {
+            echo '<p class="error">Error Logging In!</p>';
+        }
+        ?> 
 <h1> Login</h1><br />
 
 <form action="includes/process_login.php" method="post" name="login_form">                      
-    	<label>Email:</label>
+    	<label>Email  :</label>
         <input type="text" name="email" />
         <label>Password:</label>
         <input type="password" name="password" id="password"/>
-        </div>
-        <input type="button" value="Login" onclick="formhash(this.form, this.form.password);" /> 
+        <br/>
+       	<input type="button" value="Login" onclick="formhash(this.form, this.form.password);" /> 
     </form>
+    </div>
 <br />
 </div>
 <div id="SignUp">
 <h1 id="H1FontStyled"> Sign Up</h1><br />
+<?php
+        if (!empty($error_msg)) {
+            echo $error_msg;
+        }
+        ?>
 <form action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>" method="post" name="registration_form">
 			<label>Username:</label>
             <input type='text' name='username' id='username' /><br>
@@ -61,7 +72,6 @@ sec_session_start();
             <input type="password"name="password" id="password"/><br>
             <label>Confirm password:</label>
             <input type="password" name="confirmpwd" id="confirmpwd" /><br>
-        </div>
             <input type="button" value="Register" 
                    onclick="return regformhash(this.form,
                                    this.form.username,

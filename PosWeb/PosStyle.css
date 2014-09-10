@@ -5,8 +5,8 @@ p{
 }
 
 form{
-	font-size:20px;
-	text-align:left;
+	font-size: 20px;
+	text-align: left;
 }
 
 a{
@@ -44,8 +44,9 @@ H1{
 }
 
 #H1FontStyled{
-	color:#43712D;
-	font-size:40px;
+	color: #43712D;
+	font-size: 40px;
+	text-align: left;
 }
 
 Body{
@@ -131,7 +132,7 @@ Body{
 #SignUp{
 	float:left;
 	width:60%;
-	height:180px;
+	height:200px;
 	background-image:url(Images/TextBg2.jpg);
 	padding-top:30px;
 	padding-left:20%;

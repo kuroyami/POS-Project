@@ -45,11 +45,13 @@ sec_session_start();
           <div id="reservation">
           <h1>Reservation</h1>
                     <div>
-              <form id="reserveform" name="reserveform" method="post" action="reserve_submit.php">
+                    
+              <form method="post" action="reserve_submit.php">
                     Personal Information<br/>
-                        
+                    
                     First Name:
-                        <input name="firstname" type="text" size="30" maxlength="20" onblur="validateFirstName(this);" /><label id="errorFirstName" class="errorLabel"></label><br/>
+                    <input name="firstname" type="text" size="30" maxlength="20" onblur="validateFirstName(this);" /><label id="errorFirstName" class="errorLabel"></label><br/>
+                    
 
 					Last Name:
                     	<input name="lastname" type="text" size="30" maxlength="20" onblur="validateLastName(this);"/><label id="errorLastName" class="errorLabel"></label><br/>
@@ -62,16 +64,17 @@ sec_session_start();
                     Amount of people:
 						<input name="people" type="text" size="2" maxlength="2" onblur="validatePeople(this);"/><label id="errorPeople" class="errorLabel"></label><br/>
                     Date (Day/Month/Year):
-                        <input name="date" type="text" size="10" maxlength="10" onblur="validateDate(this);"/><label id="errorDate" class="errorLabel"></label><br/>
+                        <input name="dates" type="text" size="10" maxlength="10" onblur="validateDate(this);"/><label id="errorDate" class="errorLabel"></label><br/>
                     time (Hours:Minutes):
-                        <input name="time" type="text" size="5" maxlength="5" onblur="validateTime(this);"/><label id="errorTime" class="errorLabel"></label><br/>
+                        <input name="times" type="text" size="5" maxlength="5" onblur="validateTime(this);"/><label id="errorTime" class="errorLabel"></label><br/>
 					comments:
                         <input name="comments" type="text"/><br/>
-                        
-                        
-                    <input name="submit" type="button" value="SUBMIT" onclick="validateForm(signupform)"/>
+                          
+                    <input name="submit" type="submit" value="SUBMIT" onclick="validateForm(signupform)"/>
                     <input name="reset" type="reset" value="RESET" />
-                    
+                    </form>
+                    </div>
+                    </div>
              </div>
         <?php else : ?>
 
@@ -104,7 +107,7 @@ sec_session_start();
         </p>
         </div>
     	<?php endif; ?>
-        
+</div>        
 
 </body>
 </html>
